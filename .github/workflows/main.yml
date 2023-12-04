@@ -32,3 +32,4 @@ jobs:
       with:
         name: my_program
         path: ./my_program.exe
+              ./README.md
