@@ -26,8 +26,8 @@ jobs:
 
     - name: Create README
       run: echo "# README Das ist mein Readme" > README.md
-         
- - name: Archive Artifact
+      
+    - name: Archive Artifact
       uses: actions/upload-artifact@v2
       with:
         name: my_program
