@@ -16,17 +16,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install GCC
-      run: sudo apt-get install -y g++
+    - name: Install GCC and Mingw
+      run: |
+        sudo apt-get install -y g++
+        sudo apt-get install -y mingw-w64
 
     - name: Build
-      run: g++ main.cpp -o my_program
+      run: mingw-g++ main.cpp -o my_program.exe
 
     - name: Test
-      run: ./my_program
+      run: ./my_program.exe
       
     - name: Archive Artifact
       uses: actions/upload-artifact@v2
       with:
         name: my_program
-        path: ./my_program
+        path: ./my_program.exe
