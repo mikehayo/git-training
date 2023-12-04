@@ -22,7 +22,7 @@ jobs:
         sudo apt-get install -y mingw-w64
 
     - name: Build
-      run: mingw-g++ main.cpp -o my_program.exe
+      run: i686-w64-mingw32-g++ main.cpp -o my_program.exe
 
     - name: Test
       run: ./my_program.exe
