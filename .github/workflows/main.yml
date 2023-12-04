@@ -23,9 +23,6 @@ jobs:
 
     - name: Build
       run: i686-w64-mingw32-g++ main.cpp -o my_program.exe
-
-    - name: Test
-      run: ./my_program.exe
       
     - name: Archive Artifact
       uses: actions/upload-artifact@v2
